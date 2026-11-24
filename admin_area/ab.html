@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin CRUD Operations</title>
+  <style>
+    .admin-product-form {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #6c757d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #5a6268;
+  color: #fff;
+}
+
+    
+  </style>
+</head>
+<body>
+    <section class="admin-product-form">
+        <div class="container bg-light p-4 rounded">
+          <h3 class="text-center mb-4"><b>Add New Product</b></h3>
+          <form action="/addProduct" method="POST" enctype="multipart/form-data">
+            <!-- Product Name -->
+            <div class="mb-3">
+              <label for="productName" class="form-label">Product Name:</label>
+              <input type="text" id="productName" name="productName" class="form-control" placeholder="Enter product name" required>
+            </div>
+      
+            <!-- Product Price -->
+            <div class="mb-3">
+              <label for="productPrice" class="form-label">Price (Rs.):</label>
+              <input type="number" id="productPrice" name="productPrice" class="form-control" placeholder="Enter product price" required>
+            </div>
+      
+            <!-- Product Description -->
+            <div class="mb-3">
+              <label for="productDescription" class="form-label">Description:</label>
+              <textarea id="productDescription" name="productDescription" class="form-control" rows="4" placeholder="Enter product description" required></textarea>
+            </div>
+      
+            <!-- Product Image -->
+            <div class="mb-3">
+              <label for="productImage" class="form-label">Product Image:</label>
+              <input type="file" id="productImage" name="productImage" class="form-control" required>
+            </div>
+      
+            <!-- Submit Button -->
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Add Product</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+</body>
+</html>

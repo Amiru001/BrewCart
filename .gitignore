@@ -1,0 +1,23 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# IDE and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Dependencies and generated files
+vendor/
+node_modules/
+
+# Local database backups (add a schema-only SQL export separately if needed)
+*.sql
+!database/schema.sql
+*.sqlite
+*.db
